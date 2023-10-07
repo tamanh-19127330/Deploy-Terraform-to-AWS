@@ -9,8 +9,19 @@ terraform {
   backend "s3" {
     bucket = "mtr050-test"
     key    = "terraform/tf.state"
-    region = "us-east-1"
+    region = "ap-southeast-2"
   }
 }
 
-provider "aws" {}
+variable "aws_access_key"{
+default = "AKIAXALHWFOG2HVSU4EE"
+}
+
+variable "aws_secret_key"{
+default = "lRWVPFmYw06H1osVqkqWQ+4ea1VSKyLOmKI/Xu58"
+}
+
+provider “aws” {
+access_key=var.aws_access_key
+secret_key=var.aws_secret_key
+}
