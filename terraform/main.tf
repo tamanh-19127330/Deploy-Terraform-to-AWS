@@ -14,11 +14,11 @@ terraform {
 }
 
 variable "aws_access_key"{
-default = "AKIAXALHWFOG2HVSU4EE"
+
 }
 
 variable "aws_secret_key"{
-default = "lRWVPFmYw06H1osVqkqWQ+4ea1VSKyLOmKI/Xu58"
+
 }
 
 provider “aws” {
