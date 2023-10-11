@@ -39,6 +39,7 @@ jobs:
         run: |
           cd terraform
           terraform init
+          export TF_LOG= DEBUG
           terraform plan 
           terraform apply --auto-approve
           cd ../
