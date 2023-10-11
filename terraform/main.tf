@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "mtr050-test"
+    bucket = "terraform-test-github"
     key    = "terraform/tf.state"
-    region = "terraform-test-github"
+    region = "ap-southeast-2"
   }
 }
 
