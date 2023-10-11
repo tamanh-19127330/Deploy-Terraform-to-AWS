@@ -10,6 +10,7 @@ resource "aws_s3_bucket" "example" {
 
 resource "aws_s3_bucket_ownership_controls" "example" {
   bucket = aws_s3_bucket.example.id
+  control_object_ownership = true
   rule {
     object_ownership = "BucketOwnerPreferred"
   }
