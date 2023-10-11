@@ -1,3 +1,5 @@
+
+export TF_LOG= DEBUG
 terraform {
   required_providers {
     aws = {
