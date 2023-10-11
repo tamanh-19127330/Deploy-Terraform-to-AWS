@@ -22,7 +22,6 @@ resource "aws_s3_bucket_acl" "example" {
   acl    = "private"
 }
 
-
 resource "aws_s3_bucket" "example1" {
   bucket = "terraform-buckettest2"
 
