@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "gcs" {
-    credentials = "pubsubkeys.json"
+   # credentials = "pubsubkeys.json"
     bucket = "terraform-test-github"
     prefix = "terraform/state"
   }
@@ -16,5 +16,5 @@ terraform {
 
 provider "google" {
     project = "awesome-carver-401507"
-    credentials = "pubsubkeys.json"
+    #credentials = "pubsubkeys.json"
 }
