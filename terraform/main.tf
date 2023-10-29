@@ -1,22 +1,20 @@
-
-
 terraform {
   required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.17.0"
+    google = {
+      source = "hashicorp/google"
+      version = ">= 4.34.0"
     }
   }
 
-  backend "s3" {
+  backend "gcs" {
+    credentials = "pubsubkeys.json"
     bucket = "terraform-test-github"
-    key    = "terraform/tf.state"
-    region = "ap-southeast-2"
+    prefix = "terraform/state"
   }
 }
 
 
-
-provider "aws" {
-
+provider "google" {
+    project = "awesome-carver-401507"
+    credentials = "pubsubkeys.json"
 }
